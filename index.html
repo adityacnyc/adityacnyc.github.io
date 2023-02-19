@@ -16,11 +16,6 @@
     text-align: center;
   }
   </style>
-  <script src="jquery-3.6.0.js"></script>
-  <script src="jquery-ui.js"></script>
-  
-  <script src="https://kit.fontawesome.com/7513be1d77.js" crossorigin="anonymous"></script>
-
     </head>
 
 <body>
@@ -51,27 +46,40 @@
 </div>
 
 
-<!-- ------testing 123------ -->
+<!-- ------alt tag added to image per HW17 feedback------ -->
 
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.png">
+                <img src="images/user.png", alt="picture of Aditya and his sisters puppy, Zaddy">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. Quisque vitae ex sit amet 
-                    quam blandit pharetra. Nam sodales faucibus 
-                    leo, rhoncus fermentum leo posuere quis. 
-                    Sed rutrum, lorem sed interdum rutrum, enim 
-                    sapien tristique nulla, eu maximus dolor ante 
-                    quis nisi. Vestibulum eget nulla pellentesque, 
-                    fermentum tellus non, tristique ante. 
-                    Suspendisse a semper urna. Aliquam risus odio, 
-                    hendrerit in dapibus eu, sodales vel dolor.</p>
+                    As a designer, I not only draw inspiration from the world around me, but also the realms of music, video games, and sci-fi.
+                
+                    From the moment I got my first Gameboy, I fell in love with the world of gaming. 
+
+                    I developed a lifelong fascination of how technology and engaging user interfaces can immerse people in experiences with beautiful graphics and the stories crafted by game developers. 
+                    
+                    Some of my favorite game franchises include The Legend of Zelda, Uncharted, and The Last of Us.
+                    
+                    
+                    I picked up the guitar in middle school, not fully realizing how important it would be in my life. 
+                    
+                    After I got over the initial growing pains of learning proper form, I became obsessed with teaching myself all my favorite songs - eventually to the point where I can now play songs by ear.
+                    
+                    I’ve honed this skill for 10+ years and continue to self-educate to get better.
+                    
+                    
+                    Star Wars has been one of my science fiction franchises from the moment I watch the original trilogy as a kid. 
+                    
+                    As a story that continues to be enjoyed and experienced by many generations, I am continuously inspired by the creative teams that work hard to build this world. 
+                    
+                    I am actively enjoying The Mandalorian series on Disney+.
+
+                </p>
                     
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -110,16 +118,19 @@
         <div class="work-list">
             <div>
                 <h2>Case Study 1</h2>
+                <br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
                 <h2>Case Study 2</h2>
+                <br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
                 <h2>Case Study 3</h2>
+                <br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="#">Learn more</a>
             </div>
@@ -127,30 +138,38 @@
     </div>
 </div>
 
-    <script>
-var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+   <br>
+<br>
+<br>
+
+<!--script moved down from header to body and java moved into its own java file per HW17 feedback-->
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
     
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+    
+    </script>
 
-    }
-
-</script><br>
-<br>
-<br>
 </body>
 
 <!--footer-->
 
 <footer>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/7513be1d77.js" crossorigin="anonymous"></script>
 <style>
     .footer {
       position: bottom;
@@ -177,6 +196,7 @@ var tablinks = document.getElementsByClassName("tab-links");
           <br>
       <p>Designed and made by Aditya Chawla, 2023.</p>
     </div>
+     
 </footer>
 
 
